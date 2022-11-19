@@ -1,0 +1,7 @@
+# files
+**/*.js
+
+# folder
+node_modules
+build
+dist
