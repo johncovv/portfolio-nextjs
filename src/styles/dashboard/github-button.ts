@@ -19,7 +19,7 @@ export const Content = styled.button`
 
 	&:hover {
 		transform: scale(1.03);
-		background-color: rgba(var(--color-orange), 0.8);
+		filter: brightness(0.8);
 	}
 `;
 

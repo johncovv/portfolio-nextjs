@@ -21,7 +21,7 @@ export const Content = styled(Link)`
 
 	&:hover {
 		transform: scale(1.03);
-		background-color: rgba(var(--color-orange), 0.5);
+		filter: brightness(0.8);
 	}
 `;
 

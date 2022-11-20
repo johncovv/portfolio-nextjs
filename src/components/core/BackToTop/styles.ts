@@ -17,7 +17,7 @@ export const Content = styled.div`
 	cursor: pointer;
 
 	&:active {
-		background-color: rgba(var(--background-secondary), 0.8);
+		filter: brightness(0.8);
 	}
 
 	/* mobile */

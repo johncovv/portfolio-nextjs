@@ -71,7 +71,6 @@ export const Logo = styled(LogoSvg)`
 	}
 
 	&:hover {
-		fill: rgba(var(--color-orange), 0.8);
 		transform: scale(1.2);
 	}
 `;
@@ -101,7 +100,6 @@ export const MobileLogo = styled(MobileLogoSvg)`
 	}
 
 	&:hover {
-		fill: rgba(var(--color-orange), 0.8);
 		transform: scale(1.2);
 	}
 `;

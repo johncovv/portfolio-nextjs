@@ -136,6 +136,6 @@ export const Button = styled.button<ButtonAttr>`
 
 	&:hover {
 		transform: scale(1.05);
-		background-color: rgba(var(--color-orange), 0.8);
+		filter: brightness(0.8);
 	}
 `;
