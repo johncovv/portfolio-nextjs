@@ -6,7 +6,7 @@ export function colorModeInitializer(): void {
 
 	function getTheme(): 'dark' | 'light' {
 		const savedTheme = localStorage.getItem('johncovv@theme') as 'dark' | 'light' | null;
-		return savedTheme ?? 'light';
+		return savedTheme ?? 'dark';
 	}
 
 	setTheme(getTheme());
