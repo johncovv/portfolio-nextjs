@@ -27,8 +27,8 @@ const Header: React.FunctionComponent<HeaderProps> = ({ isDark, toggleTheme }: H
 				</LogoContainer>
 
 				<NavItems>
-					<Item href={{ pathname: '/skills' }}>Skills</Item>
-					<Item href={{ pathname: '/projects' }}>Projetos</Item>
+					<Item href={{ pathname: '/', hash: 'skills' }}>Skills</Item>
+					<Item href={{ pathname: '/', hash: 'projects' }}>Projetos</Item>
 
 					<TogglerButton onClick={toggleTheme}>
 						{isDark ? <IoMdSunny size={29} /> : <IoMdMoon size={29} />}

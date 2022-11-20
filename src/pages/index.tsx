@@ -1,8 +1,28 @@
 import Head from 'next/head';
 
-import { About, Content, LogoTitle, OthersItem, Title } from '../styles/dashboard';
+import { IoLocationSharp } from 'react-icons/io5';
+import { FaGithub } from 'react-icons/fa';
 
-export default function Home() {
+import { About, Content, LogoTitle, OthersItem, Title } from '../styles/dashboard';
+import SocialMedias from '../components/core/SocialMedias';
+import EmailLink from '../components/dashboard/EmailLink';
+import Projects from '../components/dashboard/Projects';
+import Skills from '../components/dashboard/Skills';
+import Button from '../components/Button';
+
+import projectsList from '../data/projects';
+import skillsList from '../data/skills';
+
+export async function getStaticProps() {
+	return {
+		props: {
+			projects: projectsList,
+			skills: skillsList,
+		},
+	};
+}
+
+export default function Home(props: any) {
 	return (
 		<>
 			<Head>
@@ -22,7 +42,7 @@ export default function Home() {
 						Jonathas Oliveira<span>(johncovv)</span>
 					</p>
 					<p>
-						{/* sou Desenvolvedor Web Full Stack, de <IoLocationSharp /> Guariba-SP. */}
+						sou Desenvolvedor Web Full Stack, de <IoLocationSharp /> Guariba-SP.
 					</p>
 				</LogoTitle>
 
@@ -38,27 +58,26 @@ export default function Home() {
 					📌 Atualmente prestando serviços a [Bnp Soluções em TI](https://www.bnpsolucoes.com.br/).
 				</OthersItem>
 
-				{/* <GithubButton>Visite meu Github</GithubButton> */}
+				<Button text="Visite meu Github" icon={FaGithub}></Button>
 
 				{/* contact */}
 				<Title style={{ marginTop: 25 }}>Contato</Title>
-				{/* <EmailButton>contato@johncovv.com</EmailButton> */}
-
-				{/* <SocialMedias style={{ marginTop: 15 }} /> */}
+				<EmailLink mail="contato@johncovv.com" />
+				<SocialMedias style={{ marginTop: 15 }} />
 
 				{/* skills */}
 				<Title paddingTop={130} id="skills">
 					Skills
 				</Title>
 
-				{/* <Skills /> */}
+				<Skills value={props.skills} />
 
 				{/* projects */}
 				<Title paddingTop={130} id="projects">
 					Projetos
 				</Title>
 
-				{/* <Projects /> */}
+				<Projects value={props.projects} />
 			</Content>
 		</>
 	);

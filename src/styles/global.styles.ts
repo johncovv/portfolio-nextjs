@@ -3,7 +3,6 @@ import styled, { createGlobalStyle } from 'styled-components';
 export default createGlobalStyle`
 	::selection {
 		background-color: rgba(255, 137, 52, 0.31);
-		color: ${({ theme }) => theme.text.primary};
 	}
 
 	* {
@@ -12,8 +11,8 @@ export default createGlobalStyle`
 		margin: 0;
 	}
 
-	html {
-		scroll-behavior: smooth;
+	html, body {
+		scroll-behavior: smooth !important; 
 	}
 
 	body {
