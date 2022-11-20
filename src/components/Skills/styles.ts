@@ -19,11 +19,7 @@ export const Content = styled.div`
 	}
 `;
 
-interface SKillAttr {
-	color: string;
-}
-
-export const Skill = styled.div<SKillAttr>`
+export const Skill = styled.div`
 	background-color: var(--background-secondary);
 	border-radius: 8px;
 

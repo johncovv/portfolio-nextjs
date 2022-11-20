@@ -2,7 +2,6 @@ import { BiLink } from 'react-icons/bi';
 
 import { Button, Container, Content, Description, Skill, Title } from './styles';
 import { ISkill } from '../../data/skills';
-import LoadableIcon from '../LoadableIcon';
 import Image from 'next/image';
 
 interface SkillsProps {
@@ -16,8 +15,8 @@ export default function Skills({ value }: SkillsProps) {
 
 	return (
 		<Content>
-			{value.map(({ name, color, url, icon, description }, index) => (
-				<Skill key={name} color={color} onClick={() => handleClickSkill(url, index)}>
+			{value.map(({ name, url, icon, description }, index) => (
+				<Skill key={name} onClick={() => handleClickSkill(url, index)}>
 					<Container>
 						<Title>
 							<Image
