@@ -1,6 +1,6 @@
 import { ThemeProvider } from 'styled-components';
 import type { AppProps } from 'next/app';
-import { useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 // themes
 import darkTheme from '../styles/themes/dark';
