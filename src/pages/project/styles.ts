@@ -68,9 +68,7 @@ export const Button = styled.button`
 	}
 `;
 
-export const About = styled(ReactMarkdown).attrs({
-	allowDangerousHtml: true,
-})`
+export const About = styled(ReactMarkdown)`
 	white-space: pre-line;
 	color: var(--text-secondary);
 
