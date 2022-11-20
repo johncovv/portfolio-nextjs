@@ -6,11 +6,10 @@ import { IoMdMoon, IoMdSunny } from 'react-icons/io';
 import { Container, Content, Item, Logo, LogoContainer, MobileLogo, NavItems, TogglerButton } from './styles';
 
 interface HeaderProps {
-	isDark: boolean;
 	toggleTheme(): void;
 }
 
-const Header: React.FunctionComponent<HeaderProps> = ({ isDark, toggleTheme }: HeaderProps) => {
+const Header: React.FunctionComponent<HeaderProps> = (props: HeaderProps) => {
 	const router = useRouter();
 
 	const handleLogoClick = (): void => {
@@ -30,8 +29,13 @@ const Header: React.FunctionComponent<HeaderProps> = ({ isDark, toggleTheme }: H
 					<Item href={{ pathname: '/', hash: 'skills' }}>Skills</Item>
 					<Item href={{ pathname: '/', hash: 'projects' }}>Projetos</Item>
 
-					<TogglerButton onClick={toggleTheme}>
-						{isDark ? <IoMdSunny size={29} /> : <IoMdMoon size={29} />}
+					<TogglerButton onClick={props.toggleTheme}>
+						<span className="dark-button">
+							<IoMdSunny size={29} />
+						</span>
+						<span className="light-button">
+							<IoMdMoon size={29} />
+						</span>
 					</TogglerButton>
 				</NavItems>
 			</Container>

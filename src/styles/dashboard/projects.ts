@@ -23,7 +23,7 @@ export const Content = styled.div`
 export const Project = styled.div`
 	position: relative;
 
-	background-color: ${({ theme }) => theme.background.secondary};
+	background-color: var(--background-secondary);
 	border-radius: 8px;
 	padding: 10px;
 
@@ -59,7 +59,7 @@ export const Icon = styled.img`
 
 export const Description = styled(ReactMarkdown)`
 	font-size: 14px;
-	color: ${({ theme }) => theme.text.secondary};
+	color: var(--text-secondary);
 
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -80,10 +80,10 @@ export const ButtonLink = styled.button`
 	font-family: 'JetBrains Mono', monospace;
 	font-weight: 700;
 
-	background-color: ${({ theme }) => theme.colors.orange};
+	background-color: var(--color-orange);
 	margin-top: 15px;
 	border: none;
-	color: ${({ theme }) => theme.colors.dark};
+	color: var(--color-dark);
 	border-radius: 8px;
 	margin-right: 15px;
 	padding: 10px;
@@ -100,7 +100,7 @@ export const ButtonLink = styled.button`
 
 	&:hover {
 		transform: scale(1.05);
-		background-color: ${({ theme }) => shade(0.2, theme.colors.orange)};
+		background-color: rgba(var(--color-orange), 0.8);
 	}
 `;
 
@@ -108,10 +108,10 @@ export const ButtonProject = styled.button`
 	font-family: 'JetBrains Mono', monospace;
 	font-weight: 700;
 
-	background-color: ${({ theme }) => theme.colors.orange};
+	background-color: var(--color-orange);
 	margin-top: 15px;
 	border: none;
-	color: ${({ theme }) => theme.colors.dark};
+	color: var(--color-dark);
 	border-radius: 8px;
 	padding: 10px;
 	font-size: 12px;
@@ -127,6 +127,6 @@ export const ButtonProject = styled.button`
 
 	&:hover {
 		transform: scale(1.05);
-		background-color: ${({ theme }) => shade(0.2, theme.colors.orange)};
+		background-color: rgba(var(--color-orange), 0.8);
 	}
 `;

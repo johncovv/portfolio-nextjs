@@ -28,7 +28,7 @@ export const LogoTitle = styled.div`
 
 		& > span {
 			font-size: 18px;
-			color: ${({ theme }) => theme.colors.orange};
+			color: var(--color-orange);
 			margin-left: 10px;
 		}
 	}
@@ -41,15 +41,15 @@ export const About = styled.p`
 	font-weight: 700;
 	font-size: 18px;
 
-	color: ${({ theme }) => theme.text.secondary};
+	color: var(--text-secondary);
 	margin-bottom: 30px;
 
 	span {
-		color: ${({ theme }) => theme.text.primary};
+		color: var(--text-primary);
 	}
 
 	span.primary {
-		color: ${({ theme }) => theme.colors.orange};
+		color: var(--color-orange);
 	}
 `;
 
@@ -74,7 +74,7 @@ export const Title = styled.p<ITitleProps>`
 
 export const OthersItem = styled(ReactMarkdown)`
 	p {
-		color: ${({ theme }) => theme.text.secondary};
+		color: var(--text-secondary);
 	}
 
 	font-family: 'JetBrains Mono', monospace;

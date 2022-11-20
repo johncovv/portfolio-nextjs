@@ -58,7 +58,7 @@ export const Source = styled.img`
 
 	transition: transform 200ms;
 
-	box-shadow: ${({ theme }) => theme.shadow.default};
+	box-shadow: var(--shadow-default);
 	border-radius: 8px;
 
 	background-image: url('/assets/loading.gif');
@@ -122,7 +122,7 @@ export const PopupCloseButton = styled(VscChromeClose).attrs({
 
 	transition: transform 200ms;
 
-	fill: ${({ theme }) => theme.colors.orange};
+	fill: var(--color-orange);
 	filter: drop-shadow(0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.75));
 
 	&:hover {
@@ -176,14 +176,14 @@ export const ImageScrollableContainer = styled.div`
 	}
 
 	&::-webkit-scrollbar-thumb {
-		background-color: ${({ theme }) => theme.colors.orange};
+		background-color: var(--color-orange);
 
 		border-top-right-radius: 0.5rem;
 		border-bottom-right-radius: 0.5rem;
 	}
 
 	&::-webkit-scrollbar-track {
-		background-color: ${({ theme }) => theme.background.secondary};
+		background-color: var(--background-secondary);
 
 		border-top-right-radius: 0.5rem;
 		border-bottom-right-radius: 0.5rem;
@@ -215,11 +215,11 @@ export const DotsContainer = styled.div`
 		transition: box-shadow 100ms;
 
 		&.activated {
-			background-color: ${({ theme }) => theme.colors.orange};
+			background-color: var(--color-orange);
 		}
 
 		&:hover {
-			box-shadow: 0 0 0 0.1rem ${({ theme }) => theme.colors.orange};
+			box-shadow: 0 0 0 0.1rem var(--color-orange);
 		}
 
 		&:not(:last-child) {
@@ -245,7 +245,7 @@ export const PopupArrayPrevious = styled(IoIosArrowDropleftCircle).attrs({
 
 	transition: fill 200ms;
 
-	fill: ${({ theme }) => theme.colors.white};
+	fill: var(--color-white);
 	filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.3));
 
 	${({ $active }) =>
@@ -253,7 +253,7 @@ export const PopupArrayPrevious = styled(IoIosArrowDropleftCircle).attrs({
 			? css`
 					cursor: pointer;
 					&:hover {
-						fill: ${({ theme }) => theme.colors.orange};
+						fill: var(--color-orange);
 					}
 			  `
 			: css`
@@ -272,7 +272,7 @@ export const PopupArrayNext = styled(IoIosArrowDroprightCircle).attrs({
 
 	transition: fill 200ms;
 
-	fill: ${({ theme }) => theme.colors.white};
+	fill: var(--color-white);
 	filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.3));
 
 	${({ $active }) =>
@@ -280,7 +280,7 @@ export const PopupArrayNext = styled(IoIosArrowDroprightCircle).attrs({
 			? css`
 					cursor: pointer;
 					&:hover {
-						fill: ${({ theme }) => theme.colors.orange};
+						fill: var(--color-orange);
 					}
 			  `
 			: css`
@@ -361,7 +361,7 @@ export const ThumbnailButton = styled.div<ThumbnailButtonAttr>`
 	transition: box-shadow 200ms ease-in-out;
 
 	border-radius: 8px;
-	box-shadow: inset 0px 0px 0px 3px ${({ isActivated, theme }) => (isActivated ? theme.colors.orange : 'transparent')};
+	box-shadow: inset 0px 0px 0px 3px ${({ isActivated }) => (isActivated ? 'var(--color-orange)' : 'transparent')};
 
 	&:not(:last-child) {
 		margin-right: 0.5rem;

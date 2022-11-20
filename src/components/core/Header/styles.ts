@@ -13,7 +13,7 @@ export const Content = styled.header`
 	right: 0;
 	z-index: 1000;
 
-	background: ${({ theme }) => theme.background.secondary};
+	background: var(--background-secondary);
 	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 	height: 75px;
 
@@ -49,11 +49,11 @@ export const Logo = styled(LogoSvg)`
 	height: 45px;
 
 	& .extended-logo-default {
-		fill: ${({ theme }) => theme.text.primary};
+		fill: var(--text-primary);
 	}
 
 	& .extended-logo-primary {
-		fill: ${({ theme }) => theme.colors.orange};
+		fill: var(--color-orange);
 	}
 
 	/* mobile */
@@ -71,7 +71,7 @@ export const Logo = styled(LogoSvg)`
 	}
 
 	&:hover {
-		fill: ${({ theme }) => shade(0.2, theme.colors.orange)};
+		fill: rgba(var(--color-orange), 0.8);
 		transform: scale(1.2);
 	}
 `;
@@ -83,11 +83,11 @@ export const MobileLogo = styled(MobileLogoSvg)`
 
 	.logo-foreground-letter-J-top,
 	.logo-foreground-letter-J-bottom {
-		fill: ${({ theme }) => theme.colors.orange};
+		fill: var(--color-orange);
 	}
 
 	.logo-foreground-letter-C {
-		fill: ${({ theme }) => theme.text.primary};
+		fill: var(--text-primary);
 	}
 
 	/* mobile */
@@ -101,7 +101,7 @@ export const MobileLogo = styled(MobileLogoSvg)`
 	}
 
 	&:hover {
-		fill: ${({ theme }) => shade(0.2, theme.colors.orange)};
+		fill: rgba(var(--color-orange), 0.8);
 		transform: scale(1.2);
 	}
 `;
@@ -116,7 +116,7 @@ export const Item = styled(Link)`
 	all: unset;
 	margin-right: 25px;
 	cursor: pointer;
-	color: ${({ theme }) => theme.text.secondary};
+	color: var(--text-secondary);
 	height: fit-content;
 `;
 
@@ -127,6 +127,14 @@ export const TogglerButton = styled.button`
 	cursor: pointer;
 
 	svg {
-		fill: ${({ theme }) => theme.colors.orange};
+		fill: var(--color-orange);
+	}
+
+	.dark-button {
+		display: var(--dark-display);
+	}
+
+	.light-button {
+		display: var(--light-display);
 	}
 `;

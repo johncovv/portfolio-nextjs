@@ -1,10 +1,9 @@
 import { IoDocumentText } from 'react-icons/io5';
 import { IoLogoGithub } from 'react-icons/io';
 import { useRouter } from 'next/router';
-import { BiLink } from 'react-icons/bi';
 
 import { ButtonContainer, ButtonLink, ButtonProject, Content, Description, Icon, Project, Title } from './styles';
-import { IProject } from '../../../data/projects';
+import { IProject } from '../../data/projects';
 
 interface ProjectsProps {
 	value: Array<IProject>;
@@ -18,7 +17,7 @@ export default function Projects({ value }: ProjectsProps) {
 			{value.map(({ id, name, icon, url, detailsUrl, github, description }) => (
 				<Project key={name}>
 					<Title>
-						{icon?.source && <Icon src={icon.source} alt={icon.alt || 'johncovv project icon'} />} {name}
+						{icon?.source && <Icon src={icon.source} alt={icon.alt || `logo do projeto ${name}`} />} {name}
 					</Title>
 					<Description linkTarget="_blank">{description}</Description>
 

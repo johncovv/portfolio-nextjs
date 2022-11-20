@@ -18,10 +18,10 @@ export const Content = styled.div`
 
 export const Info = styled.p`
 	span {
-		color: ${({ theme }) => theme.text.primary};
+		color: var(--text-primary);
 	}
 
-	color: ${({ theme }) => theme.text.secondary};
+	color: var(--text-secondary);
 
 	margin-top: 15px;
 	@media (min-width: 768px) {

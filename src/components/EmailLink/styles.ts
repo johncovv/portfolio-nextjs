@@ -12,7 +12,7 @@ export const Content = styled(Link)`
 	align-items: center;
 
 	transition: transform 200ms;
-	color: ${({ theme }) => theme.text.primary};
+	color: var(--text-primary);
 
 	&:hover {
 		transform: translateX(10px);
@@ -25,11 +25,11 @@ export const Text = styled.p`
 
 	margin-left: 10px;
 	font-size: 18px;
-	color: ${({ theme }) => theme.text.primary};
+	color: var(--text-primary);
 `;
 
 export const Icon = styled(IoMdMail)`
 	height: 25px;
 	width: 25px;
-	fill: ${({ theme }) => theme.text.primary};
+	fill: var(--text-primary);
 `;

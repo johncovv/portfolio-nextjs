@@ -9,15 +9,15 @@ export const Content = styled.div`
 
 	padding: 15px 10px 10px 15px;
 	border-top-left-radius: 50px;
-	background-color: ${({ theme }) => theme.background.secondary};
+	background-color: var(--background-secondary);
 
-	box-shadow: ${({ theme }) => theme.shadow.default};
+	box-shadow: var(--shadow-default);
 
 	transition: background-color 200ms;
 	cursor: pointer;
 
 	&:active {
-		background-color: ${({ theme }) => shade(0.2, theme.background.secondary)};
+		background-color: rgba(var(--background-secondary), 0.8);
 	}
 
 	/* mobile */

@@ -34,9 +34,9 @@ export const Button = styled.button`
 	font-family: 'JetBrains Mono', monospace;
 	font-weight: 700;
 
-	background-color: ${({ theme }) => theme.colors.orange};
+	background-color: var(--color-orange);
 	border: none;
-	color: ${({ theme }) => theme.colors.dark};
+	color: var(--color-dark);
 	border-radius: 8px;
 	padding: 10px;
 	font-size: 12px;
@@ -60,7 +60,7 @@ export const Button = styled.button`
 
 	&:hover {
 		transform: scale(1.05);
-		background-color: ${({ theme }) => shade(0.2, theme.colors.orange)};
+		background-color: rgba(var(--color-orange), 0.8);
 	}
 
 	svg {
@@ -72,10 +72,10 @@ export const About = styled(ReactMarkdown).attrs({
 	allowDangerousHtml: true,
 })`
 	white-space: pre-line;
-	color: ${({ theme }) => theme.text.secondary};
+	color: var(--text-secondary);
 
 	& strong {
-		color: ${({ theme }) => theme.text.primary};
+		color: var(--text-primary);
 	}
 `;
 
@@ -123,11 +123,11 @@ export const PartnerName = styled.a.attrs({
 	rel: 'noopener noreferrer',
 	target: '_blank',
 })`
-	color: ${({ theme }) => theme.colors.orange};
+	color: var(--color-orange);
 `;
 
 export const PartnerJob = styled.p`
-	color: ${({ theme }) => theme.text.secondary};
+	color: var(--text-secondary);
 `;
 
 // technologies
@@ -145,7 +145,7 @@ export const Technologie = styled.a.attrs({
 	rel: 'noopener noreferrer',
 	target: '_blank',
 })`
-	color: ${({ theme }) => theme.colors.orange};
+	color: var(--color-orange);
 	margin-top: 5px;
 	width: fit-content;
 
