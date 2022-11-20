@@ -1,5 +1,7 @@
-import Document, { DocumentContext } from 'next/document';
+import Document, { DocumentContext, Html, Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
+
+import { colorModeInitializer } from '../functions/colorModeInitializer';
 
 export default class MyDocument extends Document {
 	static async getInitialProps(ctx: DocumentContext) {
@@ -20,5 +22,38 @@ export default class MyDocument extends Document {
 		} finally {
 			sheet.seal();
 		}
+	}
+
+	render() {
+		return (
+			<Html lang="pt-BR">
+				<Head>
+					<meta charSet="utf-8" />
+					<link rel="shortcut icon" href="/favicon.ico" type="image/ico" />
+
+					<link rel="preconnect" href="https://fonts.gstatic.com" />
+					<link
+						href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+						rel="stylesheet"
+					/>
+				</Head>
+				<body>
+					<script
+						id="theme-script"
+						dangerouslySetInnerHTML={{
+							__html: `
+								(function() {
+									${colorModeInitializer.toString()}
+									colorModeInitializer();
+								})();
+							`,
+						}}
+					/>
+
+					<Main />
+					<NextScript />
+				</body>
+			</Html>
+		);
 	}
 }

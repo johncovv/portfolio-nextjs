@@ -5,11 +5,10 @@ import { FaGithub } from 'react-icons/fa';
 
 import { About, Content, LogoTitle, OthersItem, Title } from '../styles/dashboard';
 import SocialMedias from '../components/core/SocialMedias';
-import EmailLink from '../components/dashboard/EmailLink';
-import Projects from '../components/dashboard/Projects';
-import Skills from '../components/dashboard/Skills';
+import EmailLink from '../components/EmailLink';
+import Projects from '../components/Projects';
+import Skills from '../components/Skills';
 import Button from '../components/Button';
-
 import projectsList from '../data/projects';
 import skillsList from '../data/skills';
 
@@ -26,12 +25,8 @@ export default function Home(props: any) {
 	return (
 		<>
 			<Head>
-				<meta charSet="utf-8" />
-				<link rel="icon" href="/favicon.ico" />
-				<meta name="viewport" content="width=device-width, initial-scale=1" />
-				<meta name="description" content="Personal portfolio of John Covv (Jonathas Oliveira)" />
-
 				<title>Jonathas Oliveira</title>
+				<meta name="description" content="Personal portfolio of John Covv (Jonathas Oliveira)" />
 			</Head>
 
 			<Content>
