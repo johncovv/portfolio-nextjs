@@ -1,11 +1,6 @@
 import styled from 'styled-components';
 import Link from 'next/link';
 
-import { shade } from 'polished';
-
-import { FaGithub } from 'react-icons/fa';
-import { IconType } from 'react-icons';
-
 export const Content = styled(Link)`
 	background-color: var(--color-orange);
 	border-radius: 8px;
@@ -18,6 +13,7 @@ export const Content = styled(Link)`
 	align-items: center;
 
 	transition: transform 200ms, background-color 200ms;
+	color: var(--color-dark);
 
 	&:hover {
 		transform: scale(1.03);
