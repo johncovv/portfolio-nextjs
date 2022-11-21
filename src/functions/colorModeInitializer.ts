@@ -11,8 +11,6 @@ export function colorModeInitializer(): void {
 
 	setTheme(getTheme());
 
-	window.__theme_is_dark = getTheme() === 'dark';
-
 	window.addEventListener('theme-change', () => {
 		const currentTheme = getTheme();
 
