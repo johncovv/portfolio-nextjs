@@ -9,7 +9,7 @@ const skills: Array<ISkill> = [
 	{
 		name: 'Next.js',
 		description:
-			'Next.js é uma estrutura da web de desenvolvimento front-end React de código aberto criada por Vercel que permite funcionalidades como renderização do lado do servidor e geração de sites estáticos para aplicativos da web baseados em React.',
+			'Next.js é um framework NodeJs de desenvolvimento front-end React de código aberto criada por Vercel, que permite funcionalidades como renderização do lado do servidor e geração de sites estáticos para aplicativos da web baseados em React.',
 		url: 'https://github.com/topics/nextjs',
 		icon: 'nextjs.svg',
 	},

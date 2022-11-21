@@ -48,14 +48,18 @@ export default function Home(props: HomeProps) {
 
 				{/* about */}
 				<About>
-					Trabalho na área de Desenvolvimento Web desde 2018, neste tempo passei por várias tecnologias, como{' '}
-					<span>PHP</span>, <span>Vue</span> até que me encontrei na stack{' '}
-					<span className="primary">Full Javascript</span>, com desenvolvimento utilizando tecnologias{' '}
-					<span>Javascript</span> como <span>NodeJs</span>, <span>React</span> e <span>React Native</span>.
+					Entrei na área de Desenvolvimento em 2018, neste tempo passei por várias tecnologias, como o <span>C#</span> e{' '}
+					<span>PHP</span>, até que me encontrei na stack <span className="primary">Full Javascript</span>, com
+					desenvolvimento utilizando tecnologias <span>Javascript</span>.
+					<br />
+					<br />
+					Atualmente trabalho em projetos <span className="primary">100% Typescript</span>, onde desenvolvo aplicações
+					web desde front-end com <span>React</span>, <span>Angular</span> e <span>NextJs</span>, até back-end com{' '}
+					<span>NodeJs</span>.
 				</About>
 
 				<OthersItem linkTarget="_blank">
-					📌 Atualmente prestando serviços a [Bnp Soluções em TI](https://www.bnpsolucoes.com.br/).
+					📌 Trabalhando em conjunto com [Bnp Soluções em TI](https://www.bnpsolucoes.com.br/).
 				</OthersItem>
 
 				<Button
@@ -63,7 +67,7 @@ export default function Home(props: HomeProps) {
 					icon={FaGithub}
 					href="https://github.com/johncovv"
 					target="_blank"
-					style={{ marginTop: '1rem' }}
+					style={{ marginTop: '1.5rem' }}
 				/>
 
 				{/* contact */}
