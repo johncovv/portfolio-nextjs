@@ -30,8 +30,9 @@ export default function FourOh4() {
 					<span>
 						else if (<b>we_screwed_up</b>)
 					</span>
-					<em>{'{ '}alert</em>(<i>{`"A pagina que você esta procurando não existe."`}</i>); <span>window</span>.
-					<em>location</em> = home;
+					{'{ '}
+					<em>alert</em>(<i>{`"A pagina que você esta procurando não existe."`}</i>);
+					<span> window</span>.<em>location</em> = home;
 					{' }'}
 				</code>
 

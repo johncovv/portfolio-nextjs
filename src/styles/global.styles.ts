@@ -17,6 +17,10 @@ export default createGlobalStyle`
 
 		--dark-display: block;
 		--light-display: none;
+
+		--404-text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.1);
+		--404-foreground: rgb(0, 0, 0);
+		--404-color: transparent;
 	}
 
 	[data-theme='light'] {
@@ -35,6 +39,10 @@ export default createGlobalStyle`
 
 		--dark-display: none;
 		--light-display: block;
+
+		--404-text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5);
+		--404-foreground: rgb(255, 255, 255);
+		--404-color: rgb(255, 255, 255);
 	}
 
 	::selection {

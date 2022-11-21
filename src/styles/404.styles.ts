@@ -18,9 +18,9 @@ export const Content = styled.div`
 		font-size: 130px;
 		text-align: center;
 		letter-spacing: 5px;
-		background-color: black;
-		color: transparent;
-		text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.1);
+		background-color: var(--404-foreground);
+		color: var(--404-color);
+		text-shadow: var(--404-text-shadow);
 		-webkit-background-clip: text;
 		-moz-background-clip: text;
 		background-clip: text;
@@ -35,7 +35,7 @@ export const Content = styled.div`
 		text-align: center;
 		display: block;
 		font-size: 16px;
-		margin: 0 30px 25px;
+		margin-bottom: 25px;
 
 		span {
 			color: #ff8934;
