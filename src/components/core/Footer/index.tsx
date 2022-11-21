@@ -8,10 +8,11 @@ import { Content, Info } from './styles';
 const Footer: React.FunctionComponent = () => (
 	<Content>
 		<Info>
+			Desenvolvido por{' '}
 			<Link href="https://twitter.com/johncovv" rel="noopener noreferrer">
 				@johncovv
 			</Link>{' '}
-			- Desenvolvido em 2020/2021
+			- 2020 a 2022
 		</Info>
 
 		<SocialMedias sizeIcons={25} showEmail />
