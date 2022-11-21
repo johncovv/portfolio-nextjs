@@ -2,11 +2,10 @@
 const nextConfig = {
 	reactStrictMode: true,
 	swcMinify: true,
-
 	pageExtensions: ['tsx'],
 
 	images: {
-		domains: ['i.imgur.com'],
+		domains: ['i.imgur.com', 'imgur.com'],
 	},
 
 	webpack(config) {
@@ -27,4 +26,3 @@ const nextConfig = {
 };
 
 module.exports = nextConfig;
-
