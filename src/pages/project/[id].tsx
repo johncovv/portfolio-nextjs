@@ -1,5 +1,6 @@
 import { GetStaticPropsContext } from 'next';
 import Image from 'next/image';
+import Head from 'next/head';
 
 import { IoIosAlert, IoLogoGithub } from 'react-icons/io';
 import { DiPhotoshop } from 'react-icons/di';
@@ -59,77 +60,83 @@ export default function ProjectPage(props: ProjectProps) {
 	const project = props.value;
 
 	return (
-		<Content>
-			{project.alert && (
-				<Alert type={project.alert.type}>
-					<IoIosAlert size={22} /> {project.alert.message}
-				</Alert>
-			)}
+		<>
+			<Head>
+				<title>{project.name} | Portfólio - Jonathas Oliveira</title>
+			</Head>
 
-			<TitleContainer>
-				{project.icon && (
-					<ProjectIcon>
-						<Image src={project.icon.source} alt={project.icon.source} width={48} height={48} />
-					</ProjectIcon>
+			<Content>
+				{project.alert && (
+					<Alert type={project.alert.type}>
+						<IoIosAlert size={22} /> {project.alert.message}
+					</Alert>
 				)}
 
-				<Title>{project.name}</Title>
-			</TitleContainer>
+				<TitleContainer>
+					{project.icon && (
+						<ProjectIcon>
+							<Image src={project.icon.source} alt={project.icon.source} width={48} height={48} />
+						</ProjectIcon>
+					)}
 
-			<ButtonContainer>
-				{project.url && (
-					<Button onClick={() => window.open(project.url, '_blank')}>
-						<BiLink size={22} color="#282929" />
-						Visualizar
-					</Button>
+					<Title>{project.name}</Title>
+				</TitleContainer>
+
+				<ButtonContainer>
+					{project.url && (
+						<Button onClick={() => window.open(project.url, '_blank')}>
+							<BiLink size={22} color="#282929" />
+							Visualizar
+						</Button>
+					)}
+
+					{project.github && (
+						<Button onClick={() => window.open(project.github, '_blank')}>
+							<IoLogoGithub size={22} color="#282929" />
+							Abrir Projeto
+						</Button>
+					)}
+
+					{project.uiDesign && (
+						<Button onClick={() => window.open(project.uiDesign?.url, '_blank')}>
+							{project.uiDesign?.type === 'Figma' && <CgFigma size={22} color="#282929" />}
+							{project.uiDesign?.type === 'Adobe XD' && <SiAdobexd size={22} color="#282929" />}
+							{project.uiDesign?.type === 'Photoshop' && <DiPhotoshop size={22} color="#282929" />}
+							Abrir {project.uiDesign.type}
+						</Button>
+					)}
+				</ButtonContainer>
+
+				<About linkTarget="_blank">{project.description.replace(/\n/g, '&NewLine;').replace(/\s/g, ' ')}</About>
+
+				{project.technologies && project.technologies.length > 0 && (
+					<TechnologiesGroup>
+						<TechnologiesTitle>Tecnologias usadas:</TechnologiesTitle>
+
+						{project.technologies.map(({ name, url }) => (
+							<Technologie key={name} href={url}>
+								- {name}
+							</Technologie>
+						))}
+					</TechnologiesGroup>
 				)}
 
-				{project.github && (
-					<Button onClick={() => window.open(project.github, '_blank')}>
-						<IoLogoGithub size={22} color="#282929" />
-						Abrir Projeto
-					</Button>
+				{project.partners && project.partners.length > 0 && (
+					<PartnersGroup>
+						<PartnersGroupTitle>Parceiros no projeto:</PartnersGroupTitle>
+
+						{project.partners.map(({ name, url, job }) => (
+							<Partner key={name}>
+								<PartnerName href={url}>{name}</PartnerName>
+
+								<PartnerJob>- {job}</PartnerJob>
+							</Partner>
+						))}
+					</PartnersGroup>
 				)}
 
-				{project.uiDesign && (
-					<Button onClick={() => window.open(project.uiDesign?.url, '_blank')}>
-						{project.uiDesign?.type === 'Figma' && <CgFigma size={22} color="#282929" />}
-						{project.uiDesign?.type === 'Adobe XD' && <SiAdobexd size={22} color="#282929" />}
-						{project.uiDesign?.type === 'Photoshop' && <DiPhotoshop size={22} color="#282929" />}
-						Abrir {project.uiDesign.type}
-					</Button>
-				)}
-			</ButtonContainer>
-
-			<About linkTarget="_blank">{project.description.replace(/\n/g, '&NewLine;').replace(/\s/g, ' ')}</About>
-
-			{project.technologies && project.technologies.length > 0 && (
-				<TechnologiesGroup>
-					<TechnologiesTitle>Tecnologias usadas:</TechnologiesTitle>
-
-					{project.technologies.map(({ name, url }) => (
-						<Technologie key={name} href={url}>
-							- {name}
-						</Technologie>
-					))}
-				</TechnologiesGroup>
-			)}
-
-			{project.partners && project.partners.length > 0 && (
-				<PartnersGroup>
-					<PartnersGroupTitle>Parceiros no projeto:</PartnersGroupTitle>
-
-					{project.partners.map(({ name, url, job }) => (
-						<Partner key={name}>
-							<PartnerName href={url}>{name}</PartnerName>
-
-							<PartnerJob>- {job}</PartnerJob>
-						</Partner>
-					))}
-				</PartnersGroup>
-			)}
-
-			{project.images && <ProjectGallery images={project.images} />}
-		</Content>
+				{project.images && <ProjectGallery images={project.images} />}
+			</Content>
+		</>
 	);
 }
