@@ -30,7 +30,7 @@ export default function Home(props: HomeProps) {
 	return (
 		<>
 			<Head>
-				<title>Jonathas Oliveira</title>
+				<title>Portfólio | Jonathas Oliveira</title>
 				<meta name="description" content="Personal portfolio of John Covv (Jonathas Oliveira)" />
 			</Head>
 
@@ -58,7 +58,13 @@ export default function Home(props: HomeProps) {
 					📌 Atualmente prestando serviços a [Bnp Soluções em TI](https://www.bnpsolucoes.com.br/).
 				</OthersItem>
 
-				<Button text="Visite meu Github" icon={FaGithub} href="https://github.com/johncovv" target="_blank" />
+				<Button
+					text="Visite meu Github"
+					icon={FaGithub}
+					href="https://github.com/johncovv"
+					target="_blank"
+					style={{ marginTop: '1rem' }}
+				/>
 
 				{/* contact */}
 				<Title style={{ marginTop: 25 }}>Contato</Title>

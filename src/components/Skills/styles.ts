@@ -99,37 +99,15 @@ export const Description = styled.p`
 	}
 `;
 
-interface ButtonAttr {
+interface ButtonContainerAttr {
 	isFirst: boolean;
 }
 
-export const Button = styled.button<ButtonAttr>`
-	margin-top: 10px;
-	border: none;
-	color: var(--color-dark);
-	padding: 10px;
-	border-radius: 8px;
-	margin-left: auto;
-
-	font-family: 'JetBrains Mono', monospace;
-	font-weight: 700;
-	background-color: var(--color-orange);
-
+export const ButtonContainer = styled.div<ButtonContainerAttr>`
 	display: ${(props) => (props.isFirst ? 'flex' : 'none')};
 	@media (max-width: 767px) {
 		display: flex !important;
 	}
 
-	align-items: center;
-
-	svg {
-		margin-right: 10px;
-	}
-
-	transition: transform 100ms, background-color 200ms;
-
-	&:hover {
-		transform: scale(1.05);
-		filter: brightness(0.8);
-	}
+	margin-top: 10px;
 `;

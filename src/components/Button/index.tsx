@@ -1,21 +1,24 @@
+import type { IconBaseProps, IconType } from 'react-icons';
 import { HTMLAttributeAnchorTarget } from 'react';
-import { IconType } from 'react-icons';
 
 import { Content, IconContainer, Text } from './styles';
 
-interface ButtonProps {
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLAnchorElement> {
 	icon?: IconType;
+	iconProps?: IconBaseProps;
 	text: string;
 	href: string;
 	target?: HTMLAttributeAnchorTarget;
 }
 
 const Button = (props: ButtonProps) => {
+	const { icon: IconComponent, iconProps, href, text, target, ...rest } = props;
+
 	function Icon() {
-		if (props.icon) {
+		if (IconComponent) {
 			return (
 				<IconContainer>
-					<props.icon />
+					<IconComponent {...(iconProps ?? { size: 25 })} />
 				</IconContainer>
 			);
 		}
@@ -24,10 +27,10 @@ const Button = (props: ButtonProps) => {
 	}
 
 	return (
-		<Content href={props.href} target={props.target}>
+		<Content href={href} target={target} {...rest}>
 			<Icon />
 
-			<Text>{props.text}</Text>
+			<Text>{text}</Text>
 		</Content>
 	);
 };

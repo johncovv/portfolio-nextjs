@@ -1,8 +1,9 @@
 import { BiLink } from 'react-icons/bi';
-
-import { Button, Container, Content, Description, Skill, Title } from './styles';
-import { ISkill } from '../../data/skills';
 import Image from 'next/image';
+
+import { Container, Content, Description, Skill, Title, ButtonContainer } from './styles';
+import { ISkill } from '../../data/skills';
+import Button from '../Button';
 
 interface SkillsProps {
 	value: Array<ISkill>;
@@ -31,10 +32,16 @@ export default function Skills({ value }: SkillsProps) {
 						</Title>
 						<Description>{description}</Description>
 
-						<Button type="button" isFirst={!!(index === 0)} onClick={() => window.open(url, '_blank')}>
-							<BiLink size={22} color="#282929" />
-							Saiba mais
-						</Button>
+						<ButtonContainer isFirst={index === 0}>
+							<Button
+								text="Saiba mais"
+								target="_blank"
+								href={url}
+								icon={BiLink}
+								iconProps={{ size: 22, style: { marginRight: '0.25rem' } }}
+								style={{ marginLeft: 'auto', fontSize: '12px', padding: '10px' }}
+							/>
+						</ButtonContainer>
 					</Container>
 				</Skill>
 			))}

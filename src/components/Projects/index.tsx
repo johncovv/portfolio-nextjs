@@ -2,8 +2,9 @@ import { IoDocumentText } from 'react-icons/io5';
 import { IoLogoGithub } from 'react-icons/io';
 import { useRouter } from 'next/router';
 
-import { ButtonContainer, ButtonLink, ButtonProject, Content, Description, Icon, Project, Title } from './styles';
+import { ButtonContainer, Content, Description, Icon, Project, Title } from './styles';
 import { IProject } from '../../data/projects';
+import Button from '../Button';
 
 interface ProjectsProps {
 	value: Array<IProject>;
@@ -25,16 +26,23 @@ export default function Projects({ value }: ProjectsProps) {
 					<Description linkTarget="_blank">{description}</Description>
 
 					<ButtonContainer>
-						<ButtonLink onClick={() => router.push(`/project/${id}`)}>
-							<IoDocumentText size={22} color="#282929" />
-							Detalhes
-						</ButtonLink>
+						<Button
+							text="Detalhes"
+							href={`/project/${id}`}
+							icon={IoDocumentText}
+							iconProps={{ size: 22, style: { marginRight: '0.25rem' } }}
+							style={{ fontSize: '12px', padding: '10px', margin: '15px 15px 0 0' }}
+						/>
 
 						{!!github?.length && (
-							<ButtonProject onClick={() => window.open(github, '_blank')}>
-								<IoLogoGithub size={22} color="#282929" />
-								Abrir Projeto
-							</ButtonProject>
+							<Button
+								text="Abrir Projeto"
+								href={github}
+								target="_blank"
+								icon={IoLogoGithub}
+								iconProps={{ size: 22, style: { marginRight: '0.25rem' } }}
+								style={{ fontSize: '12px', padding: '10px', margin: '15px 15px 0 0' }}
+							/>
 						)}
 					</ButtonContainer>
 				</Project>

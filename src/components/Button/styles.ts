@@ -4,7 +4,6 @@ import Link from 'next/link';
 export const Content = styled(Link)`
 	background-color: var(--color-orange);
 	border-radius: 8px;
-	margin-top: 25px;
 	border: none;
 	padding: 15px;
 
@@ -25,13 +24,11 @@ export const Text = styled.p`
 	font-family: 'JetBrains Mono', monospace;
 	font-weight: 700;
 	color: var(--color-dark);
-	margin-left: 10px;
 `;
 
 export const IconContainer = styled.span`
 	svg {
-		width: 25px;
-		height: 25px;
 		fill: var(--color-dark);
+		margin-right: 10px;
 	}
 `;
