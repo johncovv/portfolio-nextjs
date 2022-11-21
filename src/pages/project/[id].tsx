@@ -101,7 +101,7 @@ export default function ProjectPage(props: ProjectProps) {
 				)}
 			</ButtonContainer>
 
-			<About linkTarget="_blank">{project.description.replace(/\n/g, '&NewLine;')}</About>
+			<About linkTarget="_blank">{project.description.replace(/\n/g, '&NewLine;').replace(/\s/g, ' ')}</About>
 
 			{project.technologies && project.technologies.length > 0 && (
 				<TechnologiesGroup>
