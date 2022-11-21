@@ -1,8 +1,6 @@
+import ReactMarkdown from 'react-markdown';
 import styled from 'styled-components';
 
-import ReactMarkdown from 'react-markdown';
-
-import { shade } from 'polished';
 
 export const Content = styled.div`
 	margin-top: 25px;

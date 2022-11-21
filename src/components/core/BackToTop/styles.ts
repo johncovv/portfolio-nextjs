@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 
-import { shade } from 'polished';
-
 export const Content = styled.div`
 	position: fixed;
 	bottom: -3px;

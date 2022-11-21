@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 import Link from 'next/link';
 
-import { shade } from 'polished';
-
 import LogoSvg from '../../../assets/static/extended-logo.svg';
 import MobileLogoSvg from '../../../assets/static/small-logo.svg';
 

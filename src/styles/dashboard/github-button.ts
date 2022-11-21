@@ -1,8 +1,5 @@
-import styled from 'styled-components';
-
-import { shade } from 'polished';
-
 import { FaGithub } from 'react-icons/fa';
+import styled from 'styled-components';
 
 export const Content = styled.button`
 	background-color: var(--color-orange);
