@@ -1,3 +1,4 @@
+import { HTMLAttributeAnchorTarget } from 'react';
 import { IconType } from 'react-icons';
 
 import { Content, IconContainer, Text } from './styles';
@@ -5,6 +6,8 @@ import { Content, IconContainer, Text } from './styles';
 interface ButtonProps {
 	icon?: IconType;
 	text: string;
+	href: string;
+	target?: HTMLAttributeAnchorTarget;
 }
 
 const Button = (props: ButtonProps) => {
@@ -21,7 +24,7 @@ const Button = (props: ButtonProps) => {
 	}
 
 	return (
-		<Content href="https://github.com/johncovv" target="_blank">
+		<Content href={props.href} target={props.target}>
 			<Icon />
 
 			<Text>{props.text}</Text>
