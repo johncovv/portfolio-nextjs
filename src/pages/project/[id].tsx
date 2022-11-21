@@ -40,7 +40,13 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps(context: GetStaticPropsContext) {
-	const project = projectsList.find((project) => project.id === context.params!.id);
+	const project = projectsList.find((project) => project.id === context.params?.id);
+
+	if (!project) {
+		return {
+			notFound: true,
+		};
+	}
 
 	return {
 		props: {
