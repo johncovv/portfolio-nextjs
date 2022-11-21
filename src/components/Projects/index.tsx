@@ -14,10 +14,13 @@ export default function Projects({ value }: ProjectsProps) {
 
 	return (
 		<Content>
-			{value.map(({ id, name, icon, url, detailsUrl, github, description }) => (
+			{value.map(({ id, name, icon, github, description }) => (
 				<Project key={name}>
 					<Title>
-						{icon?.source && <Icon src={icon.source} alt={icon.alt || `logo do projeto ${name}`} />} {name}
+						{icon?.source && (
+							<Icon src={icon.source} alt={icon.alt || `logo do projeto ${name}`} width={20} height={20} />
+						)}
+						{name}
 					</Title>
 					<Description linkTarget="_blank">{description}</Description>
 

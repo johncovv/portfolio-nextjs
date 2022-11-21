@@ -1,6 +1,6 @@
 import ReactMarkdown from 'react-markdown';
 import styled from 'styled-components';
-
+import Image from 'next/image';
 
 export const Content = styled.div`
 	margin-top: 25px;
@@ -50,7 +50,7 @@ export const Title = styled.p`
 	align-items: center;
 `;
 
-export const Icon = styled.img`
+export const Icon = styled(Image)`
 	width: 20px;
 	margin-right: 10px;
 `;
