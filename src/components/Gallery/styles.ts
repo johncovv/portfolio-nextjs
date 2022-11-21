@@ -50,7 +50,7 @@ export const ImageItemContainer = styled.div`
 	left: 0;
 `;
 
-export const Source = styled.img`
+export const Source = styled(Image)`
 	width: 100%;
 	height: 100%;
 	display: block;
@@ -147,8 +147,8 @@ export const PopupImageContainer = styled.div`
 `;
 
 export const ImageScrollableContainer = styled.div`
-	height: fit-content;
 	max-height: 100%;
+	max-width: 100%;
 
 	border-radius: 8px;
 	overflow-y: auto;
@@ -190,9 +190,10 @@ export const ImageScrollableContainer = styled.div`
 	}
 `;
 
-export const PopupImage = styled.img`
-	max-width: 100%;
-	display: block;
+export const PopupImage = styled(Image)`
+	all: initial !important;
+	max-width: 100% !important;
+	display: block !important;
 `;
 
 // dots

@@ -58,7 +58,7 @@ export default function ProjectGallery({ images }: IGalleryProps) {
 
 			if (next) setActiveImagePopup(next);
 		},
-		[images]
+		[images],
 	);
 
 	const handlePrevious = useCallback(
@@ -71,8 +71,16 @@ export default function ProjectGallery({ images }: IGalleryProps) {
 
 			if (previous) setActiveImagePopup(previous);
 		},
-		[images]
+		[images],
 	);
+
+	function transformImgurToThumbnail(url: string): string {
+		if (!url.includes('imgur')) return url;
+
+		const imgurID = url.replace(/https:\/\/?i?.imgur.com\/(\S+)\.png/g, '$1');
+
+		return `https://i.imgur.com/${imgurID}h.png`;
+	}
 
 	return (
 		<>
@@ -80,7 +88,7 @@ export default function ProjectGallery({ images }: IGalleryProps) {
 				{images.map((image, index) => (
 					<ImageItem key={`${image}-${index}`}>
 						<ImageItemContainer onClick={() => setActiveImagePopup(image)}>
-							<Source src={image.url} alt="johncovv project" />
+							<Source src={transformImgurToThumbnail(image.url)} alt="johncovv project" fill />
 						</ImageItemContainer>
 					</ImageItem>
 				))}
@@ -91,7 +99,14 @@ export default function ProjectGallery({ images }: IGalleryProps) {
 
 				<PopupImageContainer>
 					<ImageScrollableContainer>
-						<PopupImage src={activeImagePopup?.url} alt="johncovv project" onClick={(e) => e.stopPropagation()} />
+						{activeImagePopup?.url && (
+							<PopupImage
+								src={activeImagePopup?.url}
+								alt="johncovv project"
+								onClick={(e) => e.stopPropagation()}
+								fill
+							/>
+						)}
 					</ImageScrollableContainer>
 				</PopupImageContainer>
 
