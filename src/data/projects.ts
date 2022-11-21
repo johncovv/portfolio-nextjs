@@ -4,7 +4,6 @@ export interface IProject {
 	alias?: string;
 	icon?: { alt?: string; source: string };
 	url?: string;
-	detailsUrl?: string;
 	uiDesign?: { type: 'Figma' | 'Adobe XD' | 'Photoshop'; url: string };
 	github?: string;
 	alert?: { type: 'error' | 'warning' | 'success'; message: string };
@@ -27,7 +26,6 @@ list.push({
 	},
 	alert: { type: 'warning', message: 'Projeto em desenvolvimento!' },
 	url: 'https://www.proacexpresso.sp.gov.br',
-	detailsUrl: '/project/Proac',
 	description: `Projeto financiado pela secretaria cultural do **[Governo estadual de São Paulo](https://www.saopaulo.sp.gov.br/)**.\n\n*Programa de Ação Cultural(Proac) é uma legislação de incentivo à cultura do Estado de São Paulo criada em 2006 através da Lei nº 12.268/2006.*\n\nO intuito do desenvolvimento da plataforma **Proac Expresso** é de atualizar o antigo sistema de inscrições públicas ao incentivo cultural.
 	`,
 	partners: [
@@ -113,7 +111,6 @@ list.push({
 		message: 'Este projeto saiu do ar em Dezembro de 2020!',
 	},
 	url: 'https://www.teatroportoseguro.com.br/programacao/realizados/exreality.html',
-	detailsUrl: '/project/ExReality',
 	github: '',
 	description:
 		'O projecto **ExReality** foi criado para apresentação de uma peça de teatro online em meio a pandemia de 2020.\n\nO objetivo do projeto era apresentar a peça onde o público tivesse **acesso 24h/s por dia** a interações com os atores via Chat e Enquetes, tento impacto direto na apresentação.\n\nEste projeto também contou com a tecnologia **PWA** disponível no React, onde é possível **instalar o site como um aplicativo(desktop e mobile)**, também foi integrado o envio de **notificações** para o usuário, onde se notificava eventos na peça teatral.',
@@ -175,7 +172,6 @@ list.push({
 	icon: { source: 'https://i.imgur.com/RzEpatd.png', alt: 'Devian Logo' },
 	alert: { type: 'warning', message: 'Projeto em desenvolvimento!' },
 	url: 'https://devian.johncovv.com',
-	detailsUrl: '/project/Devian',
 	uiDesign: {
 		type: 'Figma',
 		url: 'https://www.figma.com/file/tOYHJHpGJ9s4vBL6sqbRnG/Devian-Frontend?node-id=1%3A21',
@@ -226,7 +222,6 @@ list.push({
 	alias: 'MpAuto',
 	icon: { source: 'https://i.imgur.com/WY82uIw.png', alt: 'Mp Auto Logo' },
 	url: 'https://mpauto.com.br',
-	detailsUrl: '/project/MpAuto',
 	github: '',
 	description:
 		'Neste projeto o objetivo era montar uma plataforma para apresentação de veículos da concessionária **Mp Auto** estabelecida na cidade de **Cotia - SP**.\n\nA plataforma tem ferramentas avançadas como pesquisa com filtros, galeria de fotos com carrossel, criação dinâmica de panfleto com informações do veículo para download e etc.',

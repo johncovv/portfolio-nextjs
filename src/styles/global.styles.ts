@@ -9,7 +9,7 @@ export default createGlobalStyle`
 
 		--background-primary: rgb(23,23,23);
 		--background-secondary: rgb(40,41,41);
-		
+
 		--text-primary: rgb(255,255,255);
 		--text-secondary: rgb(170,170,170);
 
@@ -48,7 +48,7 @@ export default createGlobalStyle`
 	}
 
 	html, body {
-		scroll-behavior: smooth !important; 
+		scroll-behavior: smooth !important;
 	}
 
 	body {

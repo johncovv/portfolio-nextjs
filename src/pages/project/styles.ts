@@ -1,7 +1,6 @@
 import ReactMarkdown from 'react-markdown';
 import styled from 'styled-components';
 
-
 export const Content = styled.div``;
 
 export const TitleContainer = styled.div`

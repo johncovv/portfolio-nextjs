@@ -1,16 +1,21 @@
 import Head from 'next/head';
 
-import { IoLocationSharp } from 'react-icons/io5';
 import { FaGithub } from 'react-icons/fa';
+import { IoLocationSharp } from 'react-icons/io5';
 
-import { About, Content, LogoTitle, OthersItem, Title } from '../styles/dashboard';
-import SocialMedias from '../components/core/SocialMedias';
+import { About, Content, LogoTitle, OthersItem, Title } from '../styles/dashboard.styles';
+import projectsList, { IProject } from '../data/projects';
+import skillsList, { ISkill } from '../data/skills';
+import Button from '../components/Button';
 import EmailLink from '../components/EmailLink';
 import Projects from '../components/Projects';
 import Skills from '../components/Skills';
-import Button from '../components/Button';
-import projectsList from '../data/projects';
-import skillsList from '../data/skills';
+import SocialMedias from '../components/core/SocialMedias';
+
+interface HomeProps {
+	skills: Array<ISkill>;
+	projects: Array<IProject>;
+}
 
 export async function getStaticProps() {
 	return {
@@ -21,7 +26,7 @@ export async function getStaticProps() {
 	};
 }
 
-export default function Home(props: any) {
+export default function Home(props: HomeProps) {
 	return (
 		<>
 			<Head>
