@@ -47,6 +47,12 @@ export default createGlobalStyle`
 		margin: 0;
 	}
 
+	#__next {
+    flex-direction: column;
+		min-height: 100vh;
+    display: flex;
+	}
+
 	html, body {
 		scroll-behavior: smooth !important;
 	}
@@ -103,6 +109,10 @@ export default createGlobalStyle`
 `;
 
 export const AppContainer = styled.div`
+	position: relative;
+	flex-grow: 1;
+	width: 100%;
+
 	padding: calc(50px + 75px) 20px 0;
 
 	/* mobile */
