@@ -26,43 +26,26 @@ export const ButtonContainer = styled.div`
 	display: flex;
 	flex-flow: row wrap;
 	margin-bottom: 25px;
-`;
 
-export const Button = styled.button`
-	font-family: 'JetBrains Mono', monospace;
-	font-weight: 700;
-
-	background-color: var(--color-orange);
-	border: none;
-	color: var(--color-dark);
-	border-radius: 8px;
-	padding: 10px;
-	font-size: 12px;
-	display: flex;
-	align-items: center;
-	transition: transform 100ms, background-color 200ms;
-
-	&:not(:last-child) {
-		margin-right: 15px;
-	}
-
-	@media (max-width: 767px) {
+	a {
 		&:not(:last-child) {
-			margin-bottom: 15px;
+			margin-right: 15px;
 		}
 
-		&:last-child {
-			margin-bottom: auto;
+		@media (max-width: 767px) {
+			&:not(:last-child) {
+				margin-bottom: 15px;
+			}
+
+			&:last-child {
+				margin-bottom: auto;
+			}
 		}
-	}
 
-	&:hover {
-		transform: scale(1.05);
-		filter: brightness(0.8);
-	}
-
-	svg {
-		margin-right: 5px;
+		&:hover {
+			transform: scale(1.05);
+			filter: brightness(0.8);
+		}
 	}
 `;
 

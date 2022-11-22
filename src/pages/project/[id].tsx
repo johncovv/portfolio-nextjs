@@ -1,8 +1,10 @@
-import { GetStaticPropsContext } from 'next';
+import type { GetStaticPropsContext } from 'next';
+import type { FunctionComponent } from 'react';
 import Image from 'next/image';
 import Head from 'next/head';
 
 import { IoIosAlert, IoLogoGithub } from 'react-icons/io';
+import type { IconBaseProps } from 'react-icons';
 import { DiPhotoshop } from 'react-icons/di';
 import { SiAdobexd } from 'react-icons/si';
 import { CgFigma } from 'react-icons/cg';
@@ -10,10 +12,10 @@ import { BiLink } from 'react-icons/bi';
 
 import projectsList, { IProject } from '../../data/projects';
 import ProjectGallery from '../../components/Gallery';
+import Button from '../../components/Button';
 import {
 	About,
 	Alert,
-	Button,
 	ButtonContainer,
 	Content,
 	Partner,
@@ -59,6 +61,19 @@ export async function getStaticProps(context: GetStaticPropsContext) {
 export default function ProjectPage(props: ProjectProps) {
 	const project = props.value;
 
+	const renderUiIcon: FunctionComponent<IconBaseProps> = (props: IconBaseProps) => {
+		switch (project.uiDesign?.type) {
+			case 'Figma':
+				return <CgFigma {...props} />;
+			case 'Photoshop':
+				return <DiPhotoshop {...props} />;
+			case 'Adobe XD':
+				return <SiAdobexd {...props} />;
+			default:
+				return <></>;
+		}
+	};
+
 	return (
 		<>
 			<Head>
@@ -84,26 +99,36 @@ export default function ProjectPage(props: ProjectProps) {
 
 				<ButtonContainer>
 					{project.url && (
-						<Button onClick={() => window.open(project.url, '_blank')}>
-							<BiLink size={22} color="#282929" />
-							Visualizar
-						</Button>
+						<Button
+							text="Visualizar"
+							target="_blank"
+							icon={BiLink}
+							href={project.url}
+							iconProps={{ size: 22, color: '#282929', style: { marginRight: '0.25rem' } }}
+							style={{ fontSize: '12px', padding: '10px' }}
+						/>
 					)}
 
 					{project.github && (
-						<Button onClick={() => window.open(project.github, '_blank')}>
-							<IoLogoGithub size={22} color="#282929" />
-							Abrir Projeto
-						</Button>
+						<Button
+							text="Abrir Projeto"
+							target="_blank"
+							icon={IoLogoGithub}
+							href={project.github}
+							iconProps={{ size: 22, color: '#282929', style: { marginRight: '0.25rem' } }}
+							style={{ fontSize: '12px', padding: '10px' }}
+						/>
 					)}
 
 					{project.uiDesign && (
-						<Button onClick={() => window.open(project.uiDesign?.url, '_blank')}>
-							{project.uiDesign?.type === 'Figma' && <CgFigma size={22} color="#282929" />}
-							{project.uiDesign?.type === 'Adobe XD' && <SiAdobexd size={22} color="#282929" />}
-							{project.uiDesign?.type === 'Photoshop' && <DiPhotoshop size={22} color="#282929" />}
-							Abrir {project.uiDesign.type}
-						</Button>
+						<Button
+							text={`Abrir ${project.uiDesign.type}`}
+							target="_blank"
+							href={project.uiDesign.url}
+							iconFunc={renderUiIcon}
+							iconProps={{ size: 22, color: '#282929', style: { marginRight: '0.25rem' } }}
+							style={{ fontSize: '12px', padding: '10px' }}
+						/>
 					)}
 				</ButtonContainer>
 

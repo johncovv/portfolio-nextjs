@@ -1,6 +1,5 @@
 import { IoDocumentText } from 'react-icons/io5';
 import { IoLogoGithub } from 'react-icons/io';
-import { useRouter } from 'next/router';
 
 import { ButtonContainer, Content, Description, Icon, Project, Title } from './styles';
 import { IProject } from '../../data/projects';
@@ -11,8 +10,6 @@ interface ProjectsProps {
 }
 
 export default function Projects({ value }: ProjectsProps) {
-	const router = useRouter();
-
 	return (
 		<Content>
 			{value.map(({ id, name, icon, github, description }) => (
