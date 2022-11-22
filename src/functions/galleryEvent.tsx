@@ -20,7 +20,7 @@ export function renderGalleryKeyboardEventScript(): JSX.Element {
 			id="gallery-navigation-script"
 			dangerouslySetInnerHTML={{
 				__html: `
-					${galleryEvent.toString()};
+					${galleryEvent}
 					galleryEvent();
 				`,
 			}}
