@@ -1,7 +1,7 @@
 import Document, { DocumentContext, Head, Html, Main, NextScript } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
 
-import { colorModeInitializer } from '../functions/colorModeInitializer';
+import { renderColorModeScript } from '../functions/colorModeInitializer';
 
 export default class MyDocument extends Document {
 	static async getInitialProps(ctx: DocumentContext) {
@@ -38,17 +38,7 @@ export default class MyDocument extends Document {
 					/>
 				</Head>
 				<body>
-					<script
-						id="theme-script"
-						dangerouslySetInnerHTML={{
-							__html: `
-								(function() {
-									${colorModeInitializer.toString()}
-									colorModeInitializer();
-								})();
-							`,
-						}}
-					/>
+					{renderColorModeScript()}
 
 					<Main />
 					<NextScript />
