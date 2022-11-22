@@ -1,11 +1,11 @@
+import type { FunctionComponent } from 'react';
 import Link from 'next/link';
-import React from 'react';
 
 import SocialMedias from '../SocialMedias';
 
 import { Content, Info } from './styles';
 
-const Footer: React.FunctionComponent = () => (
+const Footer: FunctionComponent = () => (
 	<Content>
 		<Info>
 			Desenvolvido por{' '}

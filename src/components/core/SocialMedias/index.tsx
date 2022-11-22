@@ -1,4 +1,4 @@
-import React, { HtmlHTMLAttributes } from 'react';
+import { FunctionComponent, HtmlHTMLAttributes } from 'react';
 
 import {
 	Content,
@@ -15,7 +15,7 @@ interface SocialMediasProps extends HtmlHTMLAttributes<HTMLDivElement> {
 	showEmail?: boolean;
 }
 
-const SocialMedias: React.FunctionComponent<SocialMediasProps> = ({
+const SocialMedias: FunctionComponent<SocialMediasProps> = ({
 	sizeIcons = 30,
 	showEmail,
 	...rest

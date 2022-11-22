@@ -1,8 +1,6 @@
-import styled from 'styled-components';
-
 import { IoLogoFacebook, IoLogoTwitter, IoMdMail } from 'react-icons/io';
-
 import { FaDiscord, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
+import styled from 'styled-components';
 
 export const Content = styled.div`
 	display: flex;

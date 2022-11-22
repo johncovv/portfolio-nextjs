@@ -1,8 +1,6 @@
-import styled from 'styled-components';
-
-import Link from 'next/link';
-
 import { IoMdMail } from 'react-icons/io';
+import styled from 'styled-components';
+import Link from 'next/link';
 
 export const Content = styled(Link)`
 	margin-top: 15px;

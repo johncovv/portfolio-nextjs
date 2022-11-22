@@ -1,7 +1,6 @@
-import { useRouter } from 'next/router';
-import React from 'react';
-
 import { IoMdMoon, IoMdSunny } from 'react-icons/io';
+import type { FunctionComponent } from 'react';
+import { useRouter } from 'next/router';
 
 import { Container, Content, Item, Logo, LogoContainer, MobileLogo, NavItems, TogglerButton } from './styles';
 
@@ -9,7 +8,7 @@ interface HeaderProps {
 	toggleTheme(): void;
 }
 
-const Header: React.FunctionComponent<HeaderProps> = (props: HeaderProps) => {
+const Header: FunctionComponent<HeaderProps> = (props: HeaderProps) => {
 	const router = useRouter();
 
 	const handleLogoClick = (): void => {
