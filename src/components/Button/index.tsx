@@ -32,7 +32,7 @@ const Button = (props: ButtonProps) => {
 	}
 
 	return (
-		<Content href={href} target={target} {...rest}>
+		<Content href={href} target={target} {...rest} scroll={false}>
 			{renderIcon()}
 
 			<Text>{text}</Text>

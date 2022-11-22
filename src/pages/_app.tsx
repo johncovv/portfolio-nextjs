@@ -4,9 +4,13 @@ import type { AppProps } from 'next/app';
 import GlobalStyles, { AppContainer } from '../styles/global.styles';
 
 // components
+
 import BackToTop from '../components/core/BackToTop';
 import Footer from '../components/core/Footer';
 import Header from '../components/core/Header';
+
+// functions
+import Loading from '../functions/loading';
 
 export default function App({ Component, pageProps }: AppProps) {
 	function toggleTheme() {
@@ -20,7 +24,9 @@ export default function App({ Component, pageProps }: AppProps) {
 			<Header toggleTheme={toggleTheme} />
 
 			<AppContainer>
-				<Component {...pageProps} />
+				<Loading>
+					<Component {...pageProps} />
+				</Loading>
 			</AppContainer>
 
 			<Footer />

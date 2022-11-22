@@ -13,7 +13,6 @@ const Header: FunctionComponent<HeaderProps> = (props: HeaderProps) => {
 
 	const handleLogoClick = (): void => {
 		router.push('/');
-		window.scrollTo({ top: 0, behavior: 'smooth' });
 	};
 
 	return (
