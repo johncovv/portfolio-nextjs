@@ -1,5 +1,6 @@
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { KeyboardEvent, useCallback, useEffect, useRef, useState } from 'react';
 
+import { renderGalleryKeyboardEventScript } from '../../functions/galleryEvent';
 import {
 	Content,
 	DotsContainer,
@@ -32,25 +33,11 @@ export default function ProjectGallery({ images }: IGalleryProps) {
 	const [activeImagePopup, setActiveImagePopup] = useState<IImageProps | null>(null);
 
 	const hasNextImage = !!images[images.findIndex((img) => img.url === activeImagePopup?.url) - 1];
-
 	const hasPreviousImage = !!images[images.findIndex((img) => img.url === activeImagePopup?.url) + 1];
 
-	useEffect(() => {
-		const activeThumbElement = document.querySelector(`.thumbnail-activated`);
-
-		if (activeThumbElement) {
-			activeThumbElement?.scrollIntoView({
-				behavior: 'smooth',
-				inline: 'center',
-			});
-		}
-	}, [activeImagePopup]);
-
-	const closePopup = (): void => setActiveImagePopup(null);
-
 	const handleNext = useCallback(
-		(event: React.MouseEvent, url?: string) => {
-			event.stopPropagation();
+		(event?: React.MouseEvent, url?: string) => {
+			event?.stopPropagation();
 
 			const selectedIndex = images.findIndex((img) => img.url === url);
 
@@ -62,8 +49,8 @@ export default function ProjectGallery({ images }: IGalleryProps) {
 	);
 
 	const handlePrevious = useCallback(
-		(event: React.MouseEvent, url?: string) => {
-			event.stopPropagation();
+		(event?: React.MouseEvent, url?: string) => {
+			event?.stopPropagation();
 
 			const selectedIndex = images.findIndex((img) => img.url === url);
 
@@ -82,12 +69,52 @@ export default function ProjectGallery({ images }: IGalleryProps) {
 		return `https://i.imgur.com/${imgurID}h.png`;
 	}
 
+	function handleThumbnailClick(event: KeyboardEvent, image: IImageProps): void {
+		event.stopPropagation();
+
+		if (event.key === 'Enter') {
+			setActiveImagePopup(image);
+		}
+	}
+
+	function closePopup(): void {
+		setActiveImagePopup(null);
+	}
+
+	useEffect(() => {
+		const activeThumbElement = document.querySelector(`.thumbnail-activated`);
+
+		if (activeThumbElement) {
+			activeThumbElement?.scrollIntoView({
+				behavior: 'smooth',
+				inline: 'center',
+			});
+		}
+	}, [activeImagePopup]);
+
+	useEffect(() => {
+		window.addEventListener('next-gallery-image', () => {
+			handleNext(undefined, activeImagePopup?.url);
+		});
+		window.addEventListener('previous-gallery-image', () => {
+			handlePrevious(undefined, activeImagePopup?.url);
+		});
+		window.addEventListener('close-popup', () => {
+			closePopup();
+		});
+	}, [handleNext, handlePrevious, activeImagePopup]);
+
 	return (
 		<>
+			{renderGalleryKeyboardEventScript()}
+
 			<Content>
 				{images.map((image, index) => (
 					<ImageItem key={`${image}-${index}`}>
-						<ImageItemContainer onClick={() => setActiveImagePopup(image)}>
+						<ImageItemContainer
+							onClick={() => setActiveImagePopup(image)}
+							onKeyUp={(e) => handleThumbnailClick(e, image)}
+						>
 							<Source src={transformImgurToThumbnail(image.url)} alt="johncovv project" fill />
 						</ImageItemContainer>
 					</ImageItem>
@@ -112,8 +139,6 @@ export default function ProjectGallery({ images }: IGalleryProps) {
 
 				<DotsContainer onClick={(e) => e.stopPropagation()}>
 					{images.map((image, index) => (
-						/* eslint-disable jsx-a11y/click-events-have-key-events */
-						/* eslint-disable jsx-a11y/no-static-element-interactions */
 						<span
 							key={`dot-${index}`}
 							className={activeImagePopup?.url === image.url ? 'activated' : undefined}

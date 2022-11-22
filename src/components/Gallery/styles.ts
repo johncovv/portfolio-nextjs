@@ -1,9 +1,7 @@
+import { IoIosArrowDropleftCircle, IoIosArrowDroprightCircle } from 'react-icons/io';
+import { VscChromeClose } from 'react-icons/vsc';
 import styled, { css } from 'styled-components';
 import Image from 'next/image';
-
-import { VscChromeClose } from 'react-icons/vsc';
-
-import { IoIosArrowDropleftCircle, IoIosArrowDroprightCircle } from 'react-icons/io';
 
 export const Content = styled.div`
 	margin-top: 50px;
@@ -42,12 +40,28 @@ export const ImageItem = styled.div`
 	}
 `;
 
-export const ImageItemContainer = styled.div`
+export const ImageItemContainer = styled.button`
 	position: absolute;
+	border: 0;
 	top: 0;
 	right: 0;
 	bottom: 0;
 	left: 0;
+
+	transition: transform 200ms;
+	border-radius: 8px;
+	overflow: hidden;
+
+	&:hover {
+		box-shadow: 0px 0px 0px 0.2rem var(--color-orange);
+		transform: scale(1.05);
+	}
+
+	&:focus-visible,
+	&:focus {
+		outline: none;
+		box-shadow: 0px 0px 0px 0.2rem var(--color-orange);
+	}
 `;
 
 export const Source = styled(Image)`
@@ -56,19 +70,12 @@ export const Source = styled(Image)`
 	display: block;
 	object-fit: cover;
 
-	transition: transform 200ms;
-
 	box-shadow: var(--shadow-default);
-	border-radius: 8px;
 
 	background-image: url('/assets/loading.gif');
 	background-size: 20px;
 	background-repeat: no-repeat;
 	background-position: center;
-
-	&:hover {
-		transform: scale(1.05);
-	}
 `;
 
 // popup image
