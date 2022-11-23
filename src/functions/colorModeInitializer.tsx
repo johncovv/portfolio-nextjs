@@ -24,7 +24,7 @@ export function renderColorModeScript(): JSX.Element {
 			id="color-mode-script"
 			dangerouslySetInnerHTML={{
 				__html: `
-					${colorModeInitializer.toString()}
+					const colorModeInitializer = ${colorModeInitializer.toString()}
 					colorModeInitializer();
 				`,
 			}}

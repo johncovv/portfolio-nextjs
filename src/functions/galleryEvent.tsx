@@ -1,5 +1,7 @@
+import Script from 'next/script';
+
 function galleryEvent(): void {
-	window.addEventListener('keyup', (e: KeyboardEvent) => {
+	document.addEventListener('keyup', (e: KeyboardEvent) => {
 		switch (e.key) {
 			case 'Escape':
 				window.dispatchEvent(new CustomEvent('close-popup'));
@@ -16,11 +18,12 @@ function galleryEvent(): void {
 
 export function renderGalleryKeyboardEventScript(): JSX.Element {
 	return (
-		<script
+		<Script
 			id="gallery-navigation-script"
+			strategy="afterInteractive"
 			dangerouslySetInnerHTML={{
 				__html: `
-					${galleryEvent}
+					const galleryEvent = ${galleryEvent.toString()}
 					galleryEvent();
 				`,
 			}}
