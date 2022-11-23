@@ -1,7 +1,7 @@
 import Script from 'next/script';
 
 function galleryEvent(): void {
-	document.addEventListener('keyup', (e: KeyboardEvent) => {
+	document.addEventListener('keydown', (e: KeyboardEvent) => {
 		switch (e.key) {
 			case 'Escape':
 				window.dispatchEvent(new CustomEvent('close-popup'));
