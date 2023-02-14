@@ -15,10 +15,10 @@ export interface IProject {
 
 const list: Array<IProject> = [];
 
-// Proac Expresso 2021
+// Proac Expresso
 list.push({
-	id: 'proac-expresso-2021',
-	name: 'Proac Expresso 2021',
+	id: 'proac-expresso',
+	name: 'Proac Expresso (2021, 2022 e 2023)',
 	alias: 'Proac',
 	icon: {
 		source: 'https://i.imgur.com/0eK9bs0.png',

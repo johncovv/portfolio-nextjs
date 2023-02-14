@@ -42,7 +42,7 @@ export default function Home(props: HomeProps) {
 						Jonathas Oliveira<span>(johncovv)</span>
 					</p>
 					<p>
-						sou Desenvolvedor Web Full Stack, de <IoLocationSharp /> Guariba-SP.
+						sou Desenvolvedor Web Full Stack, de <IoLocationSharp /> Curitiba-PR.
 					</p>
 				</LogoTitle>
 
