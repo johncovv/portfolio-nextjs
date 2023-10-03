@@ -36,7 +36,7 @@ export const Project = styled.div`
 
 		@media (min-width: 1024px) {
 			grid-column-start: 1;
-			grid-column-end: 4;
+			grid-column-end: 3;
 		}
 	}
 `;

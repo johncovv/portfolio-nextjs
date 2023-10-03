@@ -100,6 +100,42 @@ list.push({
 	],
 });
 
+// SMC
+list.push({
+	id: 'smc',
+	name: 'SMC - Capac/SisContrat ',
+	icon: {
+		source: 'https://i.imgur.com/XFB8yhM.png',
+		alt: 'Brasão da cidade de São Paulo',
+	},
+	alert: { type: 'warning', message: 'Projeto em desenvolvimento.' },
+	description: `Sistema criado para gestão de contratos da **[Secretaria cultural do município de São Paulo](https://www.prefeitura.sp.gov.br/cidade/secretarias/cultura/)**.`,
+	technologies: [
+		{
+			name: 'Typescript',
+			url: 'https://www.typescriptlang.org/docs/',
+		},
+		{
+			name: 'NextJs',
+			url: 'https://nextjs.org/docs',
+		},
+	],
+	partners: [
+		{
+			job: 'Desenvolvimento conjunto de frontend.',
+			name: 'Alexandre Hideki Siroma',
+			url: 'https://github.com/Hidekih',
+		},
+		{
+			job: 'Desenvolvimento de infra e backend.',
+			name: 'BNP Soluções',
+			url: 'https://www.bnpsolucoes.com.br/',
+		},
+	],
+
+	images: [],
+});
+
 // ExReality
 list.push({
 	id: 'exreality',

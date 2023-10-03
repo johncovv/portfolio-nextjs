@@ -12,7 +12,7 @@ const Footer: FunctionComponent = () => (
 			<Link href="https://twitter.com/johncovv" rel="noopener noreferrer">
 				@johncovv
 			</Link>{' '}
-			- 2020 a 2022
+			- 2020 a {new Date().getFullYear()}
 		</Info>
 
 		<SocialMedias sizeIcons={25} showEmail />
