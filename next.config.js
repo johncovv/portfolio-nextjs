@@ -4,6 +4,10 @@ const nextConfig = {
 	swcMinify: true,
 	pageExtensions: ['tsx'],
 
+	compiler: {
+		styledComponents: true,
+	},
+
 	images: {
 		domains: ['i.imgur.com', 'imgur.com'],
 	},
