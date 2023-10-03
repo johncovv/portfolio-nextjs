@@ -10,7 +10,7 @@ export interface IProject {
 	description: string;
 	images?: Array<{ title?: string; url: string }>;
 	technologies?: Array<{ name: string; url: string }>;
-	partners?: Array<{ name: string; url: string; job: string }>;
+	partners?: Array<{ name: string; url: string; job?: string }>;
 }
 
 const list: Array<IProject> = [];
@@ -98,6 +98,32 @@ list.push({
 		{ name: 'Angular', url: 'https://angular.io/docs' },
 		{ name: 'Ng Ant Design', url: 'https://ng.ant.design/docs/introduce/en' },
 	],
+});
+
+// LPG GOVSP
+list.push({
+	id: 'lpg-sp-gov',
+	name: 'SPGOV - Lei Paulo Gustavo',
+	icon: {
+		source: 'https://i.imgur.com/CyQYX8h.png',
+		alt: 'Logo Lei Paulo Gustavo',
+	},
+	url: 'https://leipaulogustavo.sp.gov.br',
+	description: `Projeto financiado pela secretaria cultural do **[Governo estadual de São Paulo](https://www.saopaulo.sp.gov.br/)**.\n\nO projeto **Lei Paulo Gustavo** foi criado para a **[Secretaria de Cultura e Economia Criativa do Estado de São Paulo](https://www.cultura.sp.gov.br/)**.\n\nO objetivo do projeto é de criar uma plataforma para inscrição de projetos culturais para o incentivo da lei.`,
+	technologies: [
+		{ name: 'Typescript', url: 'https://www.typescriptlang.org/docs/' },
+		{ name: 'NodeJs', url: 'https://nodejs.org/en/docs/' },
+		{ name: 'Angular', url: 'https://angular.io/docs' },
+		{ name: 'Ng Ant Design', url: 'https://ng.ant.design/docs/introduce/en' },
+	],
+	partners: [
+		{
+			name: 'BNP Soluções',
+			url: 'https://www.bnpsolucoes.com.br/',
+		},
+	],
+
+	images: [],
 });
 
 // SMC

@@ -154,7 +154,7 @@ export default function ProjectPage(props: ProjectProps) {
 							<Partner key={name}>
 								<PartnerName href={url}>{name}</PartnerName>
 
-								<PartnerJob>- {job}</PartnerJob>
+								{job && <PartnerJob>- {job}</PartnerJob>}
 							</Partner>
 						))}
 					</PartnersGroup>
