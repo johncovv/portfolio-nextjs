@@ -29,8 +29,8 @@ export default createGlobalStyle`
 		--color-dark: rgb(23,23,23);
 		--color-red: rgb(255,52,52);
 
-		--background-primary: rgb(255,253,252);
-		--background-secondary: rgb(244,244,244);
+		--background-primary: rgb(243 240 232);
+		--background-secondary: rgb(255,255,255);
 
 		--text-primary: rgb(23,23,23);
 		--text-secondary: (105,105,105);

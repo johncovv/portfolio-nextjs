@@ -77,7 +77,7 @@ export default function ProjectPage(props: ProjectProps) {
 	return (
 		<>
 			<Head>
-				<title>{project.name} | Portfólio - Jonathas Oliveira</title>
+				<title>{`${project.name} | Portfólio - Jonathas Oliveira`}</title>
 			</Head>
 
 			<Content>
