@@ -126,6 +126,32 @@ list.push({
 	images: [],
 });
 
+// LPG SP CITY
+list.push({
+	id: 'smc-lpg-sp',
+	name: 'SMC/SP - Lei Paulo Gustavo',
+	icon: {
+		source: 'https://i.imgur.com/OyROerg.png',
+		alt: 'Logo Lei Paulo Gustavo SMC',
+	},
+	url: 'https://leipaulogustavo.sp.gov.br',
+	description: `Projeto financiado pela secretaria municipal de **[São Paulo](https://www.capital.sp.gov.br/)**.\n\nProjeto criado para a **[Secretaria Municipal de Cultura de São Paulo](https://www.prefeitura.sp.gov.br/cidade/secretarias/cultura/)**.\n\nO objetivo do projeto é de criar uma plataforma para inscrição de projetos culturais para o incentivo da lei.`,
+	technologies: [
+		{ name: 'Typescript', url: 'https://www.typescriptlang.org/docs/' },
+		{ name: 'NodeJs', url: 'https://nodejs.org/en/docs/' },
+		{ name: 'Angular', url: 'https://angular.io/docs' },
+		{ name: 'Ng Ant Design', url: 'https://ng.ant.design/docs/introduce/en' },
+	],
+	partners: [
+		{
+			name: 'BNP Soluções',
+			url: 'https://www.bnpsolucoes.com.br/',
+		},
+	],
+
+	images: [],
+});
+
 // SMC
 list.push({
 	id: 'smc',
