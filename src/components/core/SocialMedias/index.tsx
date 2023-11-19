@@ -34,22 +34,10 @@ const SocialMedias: FunctionComponent<SocialMediasProps> = ({
 					}}
 				/>
 			)}
-			<WhatsappButton
-				size={sizeIcons}
-				onClick={() => {
-					handleOpenLink('https://wa.me/5517992392708');
-				}}
-			/>
 			<LinkedinButton
 				size={sizeIcons}
 				onClick={() => {
 					handleOpenLink('https://www.linkedin.com/in/johncovv/');
-				}}
-			/>
-			<FacebookButton
-				size={sizeIcons}
-				onClick={() => {
-					handleOpenLink('https://facebook.com/johncovv');
 				}}
 			/>
 			<TwitterButton
