@@ -18,7 +18,7 @@ const list: Array<IProject> = [];
 // Proac Expresso
 list.push({
 	id: 'proac-expresso',
-	name: 'Proac Expresso (2021, 2022 e 2023)',
+	name: 'Proac Expresso',
 	alias: 'Proac',
 	icon: {
 		source: 'https://i.imgur.com/0eK9bs0.png',
