@@ -24,7 +24,7 @@ list.push({
 		source: 'https://i.imgur.com/0eK9bs0.png',
 		alt: 'Governo do estado de São Paulo',
 	},
-	url: 'https://www.proacexpresso.sp.gov.br',
+	url: 'https://sistemaproac.sp.gov.br',
 	description: `Projeto financiado pela secretaria cultural do **[Governo estadual de São Paulo](https://www.saopaulo.sp.gov.br/)**.\n\n*Programa de Ação Cultural(Proac) é uma legislação de incentivo à cultura do Estado de São Paulo criada em 2006 através da Lei nº 12.268/2006.*\n\nO intuito do desenvolvimento da plataforma **Proac Expresso** é de atualizar o antigo sistema de inscrições públicas ao incentivo cultural.
 	`,
 	partners: [
@@ -134,7 +134,7 @@ list.push({
 		source: 'https://i.imgur.com/OyROerg.png',
 		alt: 'Logo Lei Paulo Gustavo SMC',
 	},
-	url: 'https://leipaulogustavo.sp.gov.br',
+	url: 'https://leipaulogustavo.prefeitura.sp.gov.br',
 	description: `Projeto financiado pela secretaria municipal de **[São Paulo](https://www.capital.sp.gov.br/)**.\n\nProjeto criado para a **[Secretaria Municipal de Cultura de São Paulo](https://www.prefeitura.sp.gov.br/cidade/secretarias/cultura/)**.\n\nO objetivo do projeto é de criar uma plataforma para inscrição de projetos culturais para o incentivo da lei.`,
 	technologies: [
 		{ name: 'Typescript', url: 'https://www.typescriptlang.org/docs/' },
@@ -197,7 +197,6 @@ list.push({
 		type: 'error',
 		message: 'Este projeto saiu do ar em Dezembro de 2020!',
 	},
-	url: 'https://www.teatroportoseguro.com.br/programacao/realizados/exreality.html',
 	github: '',
 	description:
 		'O projecto **ExReality** foi criado para apresentação de uma peça de teatro online em meio a pandemia de 2020.\n\nO objetivo do projeto era apresentar a peça onde o público tivesse **acesso 24h/s por dia** a interações com os atores via Chat e Enquetes, tento impacto direto na apresentação.\n\nEste projeto também contou com a tecnologia **PWA** disponível no React, onde é possível **instalar o site como um aplicativo(desktop e mobile)**, também foi integrado o envio de **notificações** para o usuário, onde se notificava eventos na peça teatral.',
