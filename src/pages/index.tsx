@@ -72,7 +72,7 @@ export default function Home(props: HomeProps) {
 
 				{/* contact */}
 				<Title style={{ marginTop: 25 }}>Contato</Title>
-				<EmailLink mail="contato@johncovv.com" />
+				<EmailLink mail="contact@johncovv.dev" />
 				<SocialMedias style={{ marginTop: 15 }} />
 
 				{/* skills */}

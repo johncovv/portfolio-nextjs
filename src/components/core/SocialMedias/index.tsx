@@ -1,14 +1,6 @@
 import { FunctionComponent, HtmlHTMLAttributes } from 'react';
 
-import {
-	Content,
-	DiscordButton,
-	EmailButton,
-	FacebookButton,
-	LinkedinButton,
-	TwitterButton,
-	WhatsappButton,
-} from './styles';
+import { Content, DiscordButton, EmailButton, LinkedinButton, TwitterButton } from './styles';
 
 interface SocialMediasProps extends HtmlHTMLAttributes<HTMLDivElement> {
 	sizeIcons?: number;
@@ -30,7 +22,7 @@ const SocialMedias: FunctionComponent<SocialMediasProps> = ({
 				<EmailButton
 					size={sizeIcons}
 					onClick={() => {
-						handleOpenLink('mailto:contato@johncovv.com');
+						handleOpenLink('mailto:contact@johncovv.dev');
 					}}
 				/>
 			)}
