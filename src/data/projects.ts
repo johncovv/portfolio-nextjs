@@ -15,13 +15,69 @@ export interface IProject {
 
 const list: Array<IProject> = [];
 
+// Fase Pro
+list.push({
+	id: 'fase-pro',
+	name: 'Fase Pro',
+	alias: 'fase',
+	icon: {
+		source: 'fase-pro.svg',
+		alt: 'Logo do Fase Pro',
+	},
+	url: 'https://fase.pro/',
+	description: `O [**Fase Pro**](https://fase.pro/) é o cerne por trás dos principais sistemas de gestão de fomento cultural do país.
+
+	O produto é utilizado por diversos órgãos públicos e privados, como por exemplo:
+
+	- [Proac Editais e Proac ICMS do Governo de São Paulo](https://sistemaproac.sp.gov.br)
+	- [Lei Paulo Gustavo da Secretaria de Cultura do Estado de São Paulo](https://leipaulogustavo.sp.gov.br/)
+	- [Lei Paulo Gustavo da Prefeitura de São Paulo](https://leipaulogustavo.prefeitura.sp.gov.br/)
+	- [Sistema de editais da APAA](https://editaisapaa.org.br/)
+	- [Todos os sistemas do portal de entrada da Prefeitura de São Paulo](https://portadeentrada.prefeitura.sp.gov.br/)
+
+	E muitos outros.
+
+	Utilizando diversas tecnologias avançadas, ele abrange desde as inscrições de projetos, avaliação de documentação, avaliações de projetos, rankeamento, fase de contratação utilizando assinatura manual ou digital, gerenciamento de pedidos de recursos e complementos, até a prestação de contas dos projetos.
+	`,
+	partners: [
+		{
+			name: 'BNP Soluções',
+			url: 'https://www.bnpsolucoes.com.br/',
+		},
+	],
+});
+
+// Agenda Cult
+list.push({
+	id: 'agenda-cult',
+	name: 'Agenda Cult SP',
+	alias: 'Agenda',
+	icon: {
+		source: 'agenda-cult-sp.png',
+		alt: 'Governo do estado de São Paulo',
+	},
+	url: 'https://agendacultsp.org.br',
+	description: `O **Agenda Cult** é um sistema financiado pela [Secretaria de Cultura do Governo de São Paulo](https://www.cultura.sp.gov.br/), um sistema projetado para conter um extenso calendário de eventos culturais em todo o estado.\n\nUtilizando tecnologias avançadas, o sistema oferece uma plataforma centralizada para acessar informações sobre diversas atividades culturais.`,
+	partners: [
+		{
+			name: 'BNP Soluções',
+			url: 'https://www.bnpsolucoes.com.br/',
+		},
+	],
+	technologies: [
+		{ name: 'Typescript', url: 'https://www.typescriptlang.org/docs/' },
+		{ name: 'NextJs', url: 'https://nextjs.org/' },
+		{ name: 'Ant Design', url: 'https://ant.design/' },
+	],
+});
+
 // Proac Expresso
 list.push({
-	id: 'proac-expresso',
-	name: 'Proac Expresso',
+	id: 'proac',
+	name: 'Proac',
 	alias: 'Proac',
 	icon: {
-		source: 'https://i.imgur.com/0eK9bs0.png',
+		source: 'gov-sp.png',
 		alt: 'Governo do estado de São Paulo',
 	},
 	url: 'https://sistemaproac.sp.gov.br',
@@ -105,7 +161,7 @@ list.push({
 	id: 'lpg-sp-gov',
 	name: 'SPGOV - Lei Paulo Gustavo',
 	icon: {
-		source: 'https://i.imgur.com/CyQYX8h.png',
+		source: 'lpg.png',
 		alt: 'Logo Lei Paulo Gustavo',
 	},
 	url: 'https://leipaulogustavo.sp.gov.br',
@@ -131,7 +187,7 @@ list.push({
 	id: 'smc-lpg-sp',
 	name: 'SMC/SP - Lei Paulo Gustavo',
 	icon: {
-		source: 'https://i.imgur.com/OyROerg.png',
+		source: 'lpg-smc.png',
 		alt: 'Logo Lei Paulo Gustavo SMC',
 	},
 	url: 'https://leipaulogustavo.prefeitura.sp.gov.br',
@@ -157,7 +213,7 @@ list.push({
 	id: 'smc',
 	name: 'SMC - Capac/SisContrat ',
 	icon: {
-		source: 'https://i.imgur.com/XFB8yhM.png',
+		source: 'prefeitura-sp.png',
 		alt: 'Brasão da cidade de São Paulo',
 	},
 	alert: { type: 'warning', message: 'Projeto em desenvolvimento.' },
@@ -192,7 +248,7 @@ list.push({
 list.push({
 	id: 'exreality',
 	name: 'ExReality',
-	icon: { source: 'https://i.imgur.com/ojFVFQB.png', alt: 'ExReality Logo' },
+	icon: { source: 'live.png', alt: 'ExReality Logo' },
 	alert: {
 		type: 'error',
 		message: 'Este projeto saiu do ar em Dezembro de 2020!',
@@ -255,7 +311,7 @@ list.push({
 	id: 'devian-bot',
 	name: 'Devian Bot',
 	alias: 'Devian',
-	icon: { source: 'https://i.imgur.com/RzEpatd.png', alt: 'Devian Logo' },
+	icon: { source: 'devian.png', alt: 'Devian Logo' },
 	alert: { type: 'warning', message: 'Projeto em desenvolvimento!' },
 	url: 'https://devian.johncovv.com',
 	uiDesign: {
@@ -306,7 +362,7 @@ list.push({
 	id: 'mp-auto',
 	name: 'Mp Auto',
 	alias: 'MpAuto',
-	icon: { source: 'https://i.imgur.com/WY82uIw.png', alt: 'Mp Auto Logo' },
+	icon: { source: 'mp-auto.png', alt: 'Mp Auto Logo' },
 	url: 'https://mpauto.com.br',
 	github: '',
 	description:

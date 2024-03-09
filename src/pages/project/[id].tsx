@@ -90,7 +90,7 @@ export default function ProjectPage(props: ProjectProps) {
 				<TitleContainer>
 					{project.icon && (
 						<ProjectIcon>
-							<Image src={project.icon.source} alt={project.icon.source} width={48} height={48} />
+							<Image src={'/assets/logos/' + project.icon.source} alt={project.icon.alt!} width={48} height={48} />
 						</ProjectIcon>
 					)}
 

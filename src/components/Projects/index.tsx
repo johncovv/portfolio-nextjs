@@ -16,7 +16,12 @@ export default function Projects({ value }: ProjectsProps) {
 				<Project key={name}>
 					<Title>
 						{icon?.source && (
-							<Icon src={icon.source} alt={icon.alt || `logo do projeto ${name}`} width={20} height={20} />
+							<Icon
+								src={'/assets/logos/' + icon.source}
+								alt={icon.alt || `logo do projeto ${name}`}
+								width={20}
+								height={20}
+							/>
 						)}
 						{name}
 					</Title>

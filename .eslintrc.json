@@ -19,7 +19,8 @@
 		"no-unused-expressions": "off",
 		"prettier/prettier": "error",
 
-		// typescript
+		// typescript~
+		"@typescript-eslint/no-non-null-assertion": "off",
 		"@typescript-eslint/no-unused-vars": [
 			"warn",
 			{
