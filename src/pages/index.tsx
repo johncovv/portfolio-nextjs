@@ -42,19 +42,18 @@ export default function Home(props: HomeProps) {
 						Jonathas Oliveira<span>(johncovv)</span>
 					</p>
 					<p>
-						sou Desenvolvedor Web Full Stack, de <IoLocationSharp /> Curitiba-PR.
+						Desenvolvedor Sênior Full Stack, residindo em <IoLocationSharp /> São Bernardo do Campo-SP.
 					</p>
 				</LogoTitle>
 
 				{/* about */}
 				<About>
 					Entrei na área de Desenvolvimento em 2018, neste tempo passei por várias tecnologias, como o <span>C#</span> e{' '}
-					<span>PHP</span>, até que me encontrei na stack <span className="primary">Full Javascript</span>, com
-					desenvolvimento utilizando tecnologias <span>Javascript</span>.
+					<span>PHP</span>, até que me encontrei na stack <span className="primary">Full Javascript</span>.
 					<br />
 					<br />
 					Atualmente trabalho em projetos <span className="primary">100% Typescript</span>, onde desenvolvo aplicações
-					web desde front-end com <span>React</span>, <span>Angular</span> e <span>NextJs</span>, até back-end com{' '}
+					web desde front-end com <span>React</span>, <span>Angular</span> e <span>NextJs</span>, com back-end com{' '}
 					<span>NodeJs</span>.
 				</About>
 
