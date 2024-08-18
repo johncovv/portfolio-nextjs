@@ -47,17 +47,17 @@ list.push({
 	],
 });
 
-// Agenda Cult
+// Agenda Viva SP
 list.push({
-	id: 'agenda-cult',
-	name: 'Agenda Cult SP',
+	id: 'agenda-viva',
+	name: 'Agenda Viva SP',
 	alias: 'Agenda',
 	icon: {
-		source: 'agenda-cult-sp.png',
+		source: 'viva-sp.svg',
 		alt: 'Governo do estado de São Paulo',
 	},
-	url: 'https://agendacultsp.org.br',
-	description: `O **Agenda Cult** é um sistema financiado pela [Secretaria de Cultura do Governo de São Paulo](https://www.cultura.sp.gov.br/), um sistema projetado para conter um extenso calendário de eventos culturais em todo o estado.\n\nUtilizando tecnologias avançadas, o sistema oferece uma plataforma centralizada para acessar informações sobre diversas atividades culturais.`,
+	url: 'https://agendavivasp.com.br',
+	description: `O **Agenda Viva SP** é um sistema financiado pela [Secretaria de Cultura do Governo de São Paulo](https://www.cultura.sp.gov.br/), um sistema projetado para conter um extenso calendário de eventos (cultural, esportivos e etc) em todo o estado.\n\nUtilizando tecnologias avançadas, o sistema oferece uma plataforma centralizada para acessar informações sobre diversas atividades públicas e privadas.`,
 	partners: [
 		{
 			name: 'BNP Soluções',
